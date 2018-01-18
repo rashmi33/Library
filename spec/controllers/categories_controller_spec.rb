@@ -56,11 +56,6 @@ RSpec.describe CategoriesController, type: :controller do
       end
     end
     context 'negative test' do
-      it 'should not create a category with invalid attributes' do
-        FactoryGirl.create(:category)
-        post :create, category: { category_type: '^$##' }, format: :json
-        response.should have_http_status(:unprocessable_entity)
-      end
       it 'should not create a category with nil values' do
         FactoryGirl.create(:category)
         post :create, category: { name: nil }, format: :json
