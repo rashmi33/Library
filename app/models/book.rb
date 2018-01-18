@@ -6,5 +6,5 @@ class Book < ActiveRecord::Base
 	validates :author, presence: true
 	validates :code, presence: true, length: { is: 6 }
 	validates :price, presence: true
-	validates :no_of_copies, presence: true
+	validates :no_of_copies, presence: true, numericality: { only_integer: true }
 end

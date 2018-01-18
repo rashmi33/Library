@@ -12,7 +12,7 @@ RSpec.describe IssuedHistory, type: :model do
       FactoryGirl.build(:issued_history, issue_type:'rent').should be_valid
     end
      it 'is valid with a issue_type' do
-      FactoryGirl.build(:issued_history, issue_type:'renturn').should be_valid
+      FactoryGirl.build(:issued_history, issue_type:'return').should be_valid
     end
     it 'is invalid with a wrong issue_type' do
       FactoryGirl.build(:issued_history, issue_type:'ABC').should_not be_valid
