@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all
     respond_to do |format|
-      format.json { render :json => { :categories => @categories }, status: :ok }
+      format.json { render json: { categories: @categories }, status: :ok }
       format.html
     end
   end
@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
     begin
       @category = Category.find(params[:id])
       respond_to do |format|
-        format.json { render :json => { :category => @category }, status: :ok } 
+        format.json { render json: { category: @category }, status: :ok } 
         format.html
       end
     rescue ActiveRecord::RecordNotFound => e
@@ -24,7 +24,7 @@ class CategoriesController < ApplicationController
     begin
       @category = Category.find(params[:id])
       respond_to do |format|
-        format.json { render :json => { :category => @category }, status: :ok }
+        format.json { render json: { category: @category }, status: :ok }
         format.html
       end
     rescue ActiveRecord::RecordNotFound => e
@@ -36,12 +36,12 @@ class CategoriesController < ApplicationController
   	@category = Category.new(category_params)
     if @category.save
       respond_to do |format|
-        format.json { render :json => { :category => @category }, status: :ok }
+        format.json { render json: { category: @category }, status: :ok }
         format.html { redirect_to categories_path }
       end
     else
       respond_to do |format|
-        format.json { render :json => { :category => @category.errors }, status: :unprocessable_entity }
+        format.json { render json: { category: @category.errors }, status: :unprocessable_entity }
         format.html { redirect_to new_category_path }
       end
     end
@@ -54,7 +54,7 @@ class CategoriesController < ApplicationController
         redirect_to @category
       else
         respond_to do |format|
-          format.json { render :json => { :category => @category.errors }, status: :unprocessable_entity }
+          format.json { render json: { category: @category.errors }, status: :unprocessable_entity }
           format.html { redirect_to edit_category_path }
         end
       end
@@ -68,12 +68,12 @@ class CategoriesController < ApplicationController
       @category = Category.find(params[:id])
       if @category.destroy
         respond_to do |format|
-          format.json { render :json => { :message => 'category was deleted successfully' }, status: :ok }
+          format.json { render json: { :message => 'Category was deleted successfully' }, status: :ok }
           format.html { redirect_to categories_path }
         end
       else
         respond_to do |format|
-          format.json { render :json => { :category => @category.errors }, status: :unprocessable_entity }
+          format.json { render json: { category: @category.errors }, status: :unprocessable_entity }
           format.html
         end
       end

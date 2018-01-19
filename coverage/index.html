@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-01-18T15:01:12+05:30">2018-01-18T15:01:12+05:30</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-01-19T12:51:10+05:30">2018-01-19T12:51:10+05:30</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -550,7 +550,7 @@
         <li class="covered" data-hits="2" data-linenumber="6">
           <span class="hits">2</span>
           
-          <code class="ruby">      format.json { render :json =&gt; { :books =&gt; @books }, status: :ok }</code>
+          <code class="ruby">      format.json { render json: { books: @books }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
@@ -604,7 +604,7 @@
         <li class="covered" data-hits="2" data-linenumber="15">
           <span class="hits">2</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :book =&gt; @book }, status: :ok } </code>
+          <code class="ruby">        format.json { render json: { book: @book }, status: :ok } </code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
@@ -676,7 +676,7 @@
         <li class="covered" data-hits="2" data-linenumber="27">
           <span class="hits">2</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :book =&gt; @book }, status: :ok }</code>
+          <code class="ruby">        format.json { render json: { book: @book }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="28">
@@ -748,7 +748,7 @@
         <li class="covered" data-hits="4" data-linenumber="39">
           <span class="hits">4</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :book =&gt; @book }, status: :ok }</code>
+          <code class="ruby">        format.json { render json: { book: @book }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="40">
@@ -778,7 +778,7 @@
         <li class="covered" data-hits="4" data-linenumber="44">
           <span class="hits">4</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :book =&gt; @book.errors }, status: :unprocessable_entity }</code>
+          <code class="ruby">        format.json { render json: { book: @book.errors }, status: :unprocessable_entity }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="45">
@@ -856,7 +856,7 @@
         <li class="covered" data-hits="2" data-linenumber="57">
           <span class="hits">2</span>
           
-          <code class="ruby">          format.json { render :json =&gt; { :book =&gt; @book.errors }, status: :unprocessable_entity }</code>
+          <code class="ruby">          format.json { render json: { book: @book.errors }, status: :unprocessable_entity }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="58">
@@ -940,7 +940,7 @@
         <li class="covered" data-hits="2" data-linenumber="71">
           <span class="hits">2</span>
           
-          <code class="ruby">          format.json { render :json =&gt; { :message =&gt; &#39;book was deleted successfully&#39; }, status: :ok }</code>
+          <code class="ruby">          format.json { render json: { message: &#39;Book was deleted successfully&#39; }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="72">
@@ -970,7 +970,7 @@
         <li class="missed" data-hits="0" data-linenumber="76">
           
           
-          <code class="ruby">          format.json { render :json =&gt; { :book =&gt; @book.errors }, status: :unprocessable_entity }</code>
+          <code class="ruby">          format.json { render json: { book: @book.errors }, status: :unprocessable_entity }</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="77">
@@ -1103,7 +1103,7 @@
         <li class="covered" data-hits="2" data-linenumber="6">
           <span class="hits">2</span>
           
-          <code class="ruby">      format.json { render :json =&gt; { :categories =&gt; @categories }, status: :ok }</code>
+          <code class="ruby">      format.json { render json: { categories: @categories }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
@@ -1157,7 +1157,7 @@
         <li class="covered" data-hits="2" data-linenumber="15">
           <span class="hits">2</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :category =&gt; @category }, status: :ok } </code>
+          <code class="ruby">        format.json { render json: { category: @category }, status: :ok } </code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
@@ -1229,7 +1229,7 @@
         <li class="covered" data-hits="2" data-linenumber="27">
           <span class="hits">2</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :category =&gt; @category }, status: :ok }</code>
+          <code class="ruby">        format.json { render json: { category: @category }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="28">
@@ -1301,7 +1301,7 @@
         <li class="covered" data-hits="2" data-linenumber="39">
           <span class="hits">2</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :category =&gt; @category }, status: :ok }</code>
+          <code class="ruby">        format.json { render json: { category: @category }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="40">
@@ -1331,7 +1331,7 @@
         <li class="covered" data-hits="2" data-linenumber="44">
           <span class="hits">2</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :category =&gt; @category.errors }, status: :unprocessable_entity }</code>
+          <code class="ruby">        format.json { render json: { category: @category.errors }, status: :unprocessable_entity }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="45">
@@ -1409,7 +1409,7 @@
         <li class="covered" data-hits="2" data-linenumber="57">
           <span class="hits">2</span>
           
-          <code class="ruby">          format.json { render :json =&gt; { :category =&gt; @category.errors }, status: :unprocessable_entity }</code>
+          <code class="ruby">          format.json { render json: { category: @category.errors }, status: :unprocessable_entity }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="58">
@@ -1493,7 +1493,7 @@
         <li class="covered" data-hits="2" data-linenumber="71">
           <span class="hits">2</span>
           
-          <code class="ruby">          format.json { render :json =&gt; { :message =&gt; &#39;category was deleted successfully&#39; }, status: :ok }</code>
+          <code class="ruby">          format.json { render json: { :message =&gt; &#39;Category was deleted successfully&#39; }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="72">
@@ -1523,7 +1523,7 @@
         <li class="missed" data-hits="0" data-linenumber="76">
           
           
-          <code class="ruby">          format.json { render :json =&gt; { :category =&gt; @category.errors }, status: :unprocessable_entity }</code>
+          <code class="ruby">          format.json { render json: { category: @category.errors }, status: :unprocessable_entity }</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="77">
@@ -1656,7 +1656,7 @@
         <li class="covered" data-hits="2" data-linenumber="6">
           <span class="hits">2</span>
           
-          <code class="ruby">      format.json { render :json =&gt; { :issued_histories =&gt; @issued_histories }, status: :ok }</code>
+          <code class="ruby">      format.json { render json: { issued_histories: @issued_histories }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
@@ -1710,7 +1710,7 @@
         <li class="covered" data-hits="2" data-linenumber="15">
           <span class="hits">2</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :issued_history =&gt; @issued_history }, status: :ok } </code>
+          <code class="ruby">        format.json { render json: { issued_history: @issued_history }, status: :ok } </code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
@@ -1782,7 +1782,7 @@
         <li class="covered" data-hits="2" data-linenumber="27">
           <span class="hits">2</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :issued_history =&gt; @issued_history }, status: :ok }</code>
+          <code class="ruby">        format.json { render json: { issued_history: @issued_history }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="28">
@@ -1854,7 +1854,7 @@
         <li class="covered" data-hits="4" data-linenumber="39">
           <span class="hits">4</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :issued_history =&gt; @issued_history }, status: :ok }</code>
+          <code class="ruby">        format.json { render json: { issued_history: @issued_history }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="40">
@@ -1884,7 +1884,7 @@
         <li class="covered" data-hits="6" data-linenumber="44">
           <span class="hits">6</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :issued_history =&gt; @issued_history.errors }, status: :unprocessable_entity }</code>
+          <code class="ruby">        format.json { render json: { issued_history: @issued_history.errors }, status: :unprocessable_entity }</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="45">
@@ -1962,7 +1962,7 @@
         <li class="covered" data-hits="4" data-linenumber="57">
           <span class="hits">4</span>
           
-          <code class="ruby">          format.json { render :json =&gt; { :issued_history =&gt; @issued_history.errors }, status: :unprocessable_entity }</code>
+          <code class="ruby">          format.json { render json: { issued_history: @issued_history.errors }, status: :unprocessable_entity }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="58">
@@ -2046,7 +2046,7 @@
         <li class="covered" data-hits="2" data-linenumber="71">
           <span class="hits">2</span>
           
-          <code class="ruby">          format.json { render :json =&gt; { :message =&gt; &#39;issued_history was deleted successfully&#39; }, status: :ok }</code>
+          <code class="ruby">          format.json { render json: { :message =&gt; &#39;Issued_history was deleted successfully&#39; }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="72">
@@ -2076,7 +2076,7 @@
         <li class="missed" data-hits="0" data-linenumber="76">
           
           
-          <code class="ruby">          format.json { render :json =&gt; { :issued_history =&gt; @issued_history.errors }, status: :unprocessable_entity }</code>
+          <code class="ruby">          format.json { render json: { issued_history: @issued_history.errors }, status: :unprocessable_entity }</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="77">
@@ -2209,7 +2209,7 @@
         <li class="covered" data-hits="2" data-linenumber="6">
           <span class="hits">2</span>
           
-          <code class="ruby">      format.json { render :json =&gt; { :libraries =&gt; @libraries }, status: :ok }</code>
+          <code class="ruby">      format.json { render json: { libraries: @libraries }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
@@ -2263,7 +2263,7 @@
         <li class="covered" data-hits="2" data-linenumber="15">
           <span class="hits">2</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :library =&gt; @library }, status: :ok } </code>
+          <code class="ruby">        format.json { render json: { library: @library }, status: :ok } </code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
@@ -2335,7 +2335,7 @@
         <li class="covered" data-hits="2" data-linenumber="27">
           <span class="hits">2</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :library =&gt; @library }, status: :ok }</code>
+          <code class="ruby">        format.json { render json: { library: @library }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="28">
@@ -2407,7 +2407,7 @@
         <li class="covered" data-hits="2" data-linenumber="39">
           <span class="hits">2</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :library =&gt; @library }, status: :ok }</code>
+          <code class="ruby">        format.json { render json: { library: @library }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="40">
@@ -2437,7 +2437,7 @@
         <li class="covered" data-hits="4" data-linenumber="44">
           <span class="hits">4</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :library =&gt; @library.errors }, status: :unprocessable_entity }</code>
+          <code class="ruby">        format.json { render json: { library: @library.errors }, status: :unprocessable_entity }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="45">
@@ -2515,7 +2515,7 @@
         <li class="covered" data-hits="2" data-linenumber="57">
           <span class="hits">2</span>
           
-          <code class="ruby">          format.json { render :json =&gt; { :library =&gt; @library.errors }, status: :unprocessable_entity }</code>
+          <code class="ruby">          format.json { render json: { library: @library.errors }, status: :unprocessable_entity }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="58">
@@ -2599,7 +2599,7 @@
         <li class="covered" data-hits="2" data-linenumber="71">
           <span class="hits">2</span>
           
-          <code class="ruby">          format.json { render :json =&gt; { :message =&gt; &#39;library was deleted successfully&#39; }, status: :ok }</code>
+          <code class="ruby">          format.json { render json: { :message =&gt; &#39;Library was deleted successfully&#39; }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="72">
@@ -2629,7 +2629,7 @@
         <li class="missed" data-hits="0" data-linenumber="76">
           
           
-          <code class="ruby">          format.json { render :json =&gt; { :library =&gt; @library.errors }, status: :unprocessable_entity }</code>
+          <code class="ruby">          format.json { render json: { library: @library.errors }, status: :unprocessable_entity }</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="77">
@@ -2762,7 +2762,7 @@
         <li class="covered" data-hits="2" data-linenumber="6">
           <span class="hits">2</span>
           
-          <code class="ruby">      format.json { render :json =&gt; { :members =&gt; @members }, status: :ok }</code>
+          <code class="ruby">      format.json { render json: { members: @members }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
@@ -2816,7 +2816,7 @@
         <li class="covered" data-hits="2" data-linenumber="15">
           <span class="hits">2</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :member =&gt; @member }, status: :ok } </code>
+          <code class="ruby">        format.json { render json: { member: @member }, status: :ok } </code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
@@ -2888,7 +2888,7 @@
         <li class="covered" data-hits="2" data-linenumber="27">
           <span class="hits">2</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :member =&gt; @member }, status: :ok }</code>
+          <code class="ruby">        format.json { render json: { member: @member }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="28">
@@ -2960,7 +2960,7 @@
         <li class="covered" data-hits="4" data-linenumber="39">
           <span class="hits">4</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :member =&gt; @member }, status: :ok }</code>
+          <code class="ruby">        format.json { render json: { member: @member }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="40">
@@ -2990,7 +2990,7 @@
         <li class="covered" data-hits="4" data-linenumber="44">
           <span class="hits">4</span>
           
-          <code class="ruby">        format.json { render :json =&gt; { :member =&gt; @member.errors }, status: :unprocessable_entity }</code>
+          <code class="ruby">        format.json { render json: { member: @member.errors }, status: :unprocessable_entity }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="45">
@@ -3068,7 +3068,7 @@
         <li class="covered" data-hits="2" data-linenumber="57">
           <span class="hits">2</span>
           
-          <code class="ruby">          format.json { render :json =&gt; { :member =&gt; @member.errors }, status: :unprocessable_entity }</code>
+          <code class="ruby">          format.json { render json: { member: @member.errors }, status: :unprocessable_entity }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="58">
@@ -3152,7 +3152,7 @@
         <li class="covered" data-hits="2" data-linenumber="71">
           <span class="hits">2</span>
           
-          <code class="ruby">          format.json { render :json =&gt; { :message =&gt; &#39;member was deleted successfully&#39; }, status: :ok }</code>
+          <code class="ruby">          format.json { render json: { :message =&gt; &#39;Member was deleted successfully&#39; }, status: :ok }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="72">
@@ -3182,7 +3182,7 @@
         <li class="missed" data-hits="0" data-linenumber="76">
           
           
-          <code class="ruby">          format.json { render :json =&gt; { :member =&gt; @member.errors }, status: :unprocessable_entity }</code>
+          <code class="ruby">          format.json { render json: { member: @member.errors }, status: :unprocessable_entity }</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="77">
@@ -5249,7 +5249,7 @@
         <li class="covered" data-hits="1" data-linenumber="71">
           <span class="hits">1</span>
           
-          <code class="ruby">        put :update ,id: category.id, category: { category_type: &#39;Educational&#39; }</code>
+          <code class="ruby">        put :update, id: category.id, category: { category_type: &#39;Educational&#39; }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="72">
@@ -5982,7 +5982,7 @@
         <li class="covered" data-hits="1" data-linenumber="85">
           <span class="hits">1</span>
           
-          <code class="ruby">        put :update ,id: issued_history.id, issued_history: { issue_type: &#39;rent&#39;, date_of_issue: Faker::Date.forward(100), date_of_return: Faker::Date.forward(100), issued_no: Faker::Number.number(2) }</code>
+          <code class="ruby">        put :update, id: issued_history.id, issued_history: { issue_type: &#39;rent&#39;, date_of_issue: Faker::Date.forward(100), date_of_return: Faker::Date.forward(100), issued_no: Faker::Number.number(2) }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="86">
@@ -6691,7 +6691,7 @@
         <li class="covered" data-hits="1" data-linenumber="76">
           <span class="hits">1</span>
           
-          <code class="ruby">        put :update ,id: library.id, library: { name: Faker::Name.first_name, address: Faker::Address.street_address, phone_no: Faker::Number.number(17) }</code>
+          <code class="ruby">        put :update, id: library.id, library: { name: Faker::Name.first_name, address: Faker::Address.street_address, phone_no: Faker::Number.number(17) }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="77">
@@ -7394,7 +7394,7 @@
         <li class="covered" data-hits="1" data-linenumber="80">
           <span class="hits">1</span>
           
-          <code class="ruby">        put :update ,id: member.id, member: { name: Faker::Name.first_name, address: Faker::Address.street_address, phone_no: Faker::Number.number(17), code: &#39;Dgg566&#39;, is_author: false }</code>
+          <code class="ruby">        put :update, id: member.id, member: { name: Faker::Name.first_name, address: Faker::Address.street_address, phone_no: Faker::Number.number(17), code: &#39;Dgg566&#39;, is_author: false }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="81">

@@ -82,7 +82,7 @@ RSpec.describe IssuedHistoriesController, type: :controller do
     context 'positive test' do
       it 'should update the issued_history with valid attributes' do
         issued_history = FactoryGirl.create(:issued_history)
-        put :update ,id: issued_history.id, issued_history: { issue_type: 'rent', date_of_issue: Faker::Date.forward(100), date_of_return: Faker::Date.forward(100), issued_no: Faker::Number.number(2) }
+        put :update, id: issued_history.id, issued_history: { issue_type: 'rent', date_of_issue: Faker::Date.forward(100), date_of_return: Faker::Date.forward(100), issued_no: Faker::Number.number(2) }
         expect(response).to redirect_to issued_history_path(issued_history.id)
       end
     end

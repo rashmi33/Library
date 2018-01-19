@@ -73,7 +73,7 @@ RSpec.describe LibrariesController, type: :controller do
     context 'positive test' do
       it 'should update the library with valid attributes' do
         library = FactoryGirl.create(:library)
-        put :update ,id: library.id, library: { name: Faker::Name.first_name, address: Faker::Address.street_address, phone_no: Faker::Number.number(17) }
+        put :update, id: library.id, library: { name: Faker::Name.first_name, address: Faker::Address.street_address, phone_no: Faker::Number.number(17) }
         expect(response).to redirect_to library_path(library.id)
       end
     end

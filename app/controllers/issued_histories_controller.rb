@@ -3,7 +3,7 @@ class IssuedHistoriesController < ApplicationController
   def index
     @issued_histories = IssuedHistory.all
     respond_to do |format|
-      format.json { render :json => { :issued_histories => @issued_histories }, status: :ok }
+      format.json { render json: { issued_histories: @issued_histories }, status: :ok }
       format.html
     end
   end
@@ -12,7 +12,7 @@ class IssuedHistoriesController < ApplicationController
     begin
       @issued_history = IssuedHistory.find(params[:id])
       respond_to do |format|
-        format.json { render :json => { :issued_history => @issued_history }, status: :ok } 
+        format.json { render json: { issued_history: @issued_history }, status: :ok } 
         format.html
       end
     rescue ActiveRecord::RecordNotFound => e
@@ -24,7 +24,7 @@ class IssuedHistoriesController < ApplicationController
     begin
       @issued_history = IssuedHistory.find(params[:id])
       respond_to do |format|
-        format.json { render :json => { :issued_history => @issued_history }, status: :ok }
+        format.json { render json: { issued_history: @issued_history }, status: :ok }
         format.html
       end
     rescue ActiveRecord::RecordNotFound => e
@@ -36,12 +36,12 @@ class IssuedHistoriesController < ApplicationController
   	@issued_history = IssuedHistory.new(issued_history_params)
     if @issued_history.save
       respond_to do |format|
-        format.json { render :json => { :issued_history => @issued_history }, status: :ok }
+        format.json { render json: { issued_history: @issued_history }, status: :ok }
         format.html { redirect_to issued_histories_path }
       end
     else
       respond_to do |format|
-        format.json { render :json => { :issued_history => @issued_history.errors }, status: :unprocessable_entity }
+        format.json { render json: { issued_history: @issued_history.errors }, status: :unprocessable_entity }
         format.html { redirect_to new_issued_history_path }
       end
     end
@@ -54,7 +54,7 @@ class IssuedHistoriesController < ApplicationController
         redirect_to @issued_history
       else
         respond_to do |format|
-          format.json { render :json => { :issued_history => @issued_history.errors }, status: :unprocessable_entity }
+          format.json { render json: { issued_history: @issued_history.errors }, status: :unprocessable_entity }
           format.html { redirect_to edit_issued_history_path }
         end
       end
@@ -68,12 +68,12 @@ class IssuedHistoriesController < ApplicationController
       @issued_history = IssuedHistory.find(params[:id])
       if @issued_history.destroy
         respond_to do |format|
-          format.json { render :json => { :message => 'issued_history was deleted successfully' }, status: :ok }
+          format.json { render json: { :message => 'Issued_history was deleted successfully' }, status: :ok }
           format.html { redirect_to issued_histories_path }
         end
       else
         respond_to do |format|
-          format.json { render :json => { :issued_history => @issued_history.errors }, status: :unprocessable_entity }
+          format.json { render json: { issued_history: @issued_history.errors }, status: :unprocessable_entity }
           format.html
         end
       end

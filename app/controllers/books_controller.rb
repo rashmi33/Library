@@ -3,7 +3,7 @@ class BooksController < ApplicationController
   def index
     @books = Book.all
     respond_to do |format|
-      format.json { render :json => { :books => @books }, status: :ok }
+      format.json { render json: { books: @books }, status: :ok }
       format.html
     end
   end
@@ -12,7 +12,7 @@ class BooksController < ApplicationController
     begin
       @book = Book.find(params[:id])
       respond_to do |format|
-        format.json { render :json => { :book => @book }, status: :ok } 
+        format.json { render json: { book: @book }, status: :ok } 
         format.html
       end
     rescue ActiveRecord::RecordNotFound => e
@@ -24,7 +24,7 @@ class BooksController < ApplicationController
     begin
       @book = Book.find(params[:id])
       respond_to do |format|
-        format.json { render :json => { :book => @book }, status: :ok }
+        format.json { render json: { book: @book }, status: :ok }
         format.html
       end
     rescue ActiveRecord::RecordNotFound => e
@@ -36,12 +36,12 @@ class BooksController < ApplicationController
   	@book = Book.new(book_params)
     if @book.save
       respond_to do |format|
-        format.json { render :json => { :book => @book }, status: :ok }
+        format.json { render json: { book: @book }, status: :ok }
         format.html { redirect_to books_path }
       end
     else
       respond_to do |format|
-        format.json { render :json => { :book => @book.errors }, status: :unprocessable_entity }
+        format.json { render json: { book: @book.errors }, status: :unprocessable_entity }
         format.html { redirect_to new_book_path }
       end
     end
@@ -54,7 +54,7 @@ class BooksController < ApplicationController
         redirect_to @book
       else
         respond_to do |format|
-          format.json { render :json => { :book => @book.errors }, status: :unprocessable_entity }
+          format.json { render json: { book: @book.errors }, status: :unprocessable_entity }
           format.html { redirect_to edit_book_path }
         end
       end
@@ -68,12 +68,12 @@ class BooksController < ApplicationController
       @book = Book.find(params[:id])
       if @book.destroy
         respond_to do |format|
-          format.json { render :json => { :message => 'book was deleted successfully' }, status: :ok }
+          format.json { render json: { message: 'Book was deleted successfully' }, status: :ok }
           format.html { redirect_to books_path }
         end
       else
         respond_to do |format|
-          format.json { render :json => { :book => @book.errors }, status: :unprocessable_entity }
+          format.json { render json: { book: @book.errors }, status: :unprocessable_entity }
           format.html
         end
       end

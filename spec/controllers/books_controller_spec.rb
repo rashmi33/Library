@@ -77,7 +77,7 @@ RSpec.describe BooksController, type: :controller do
     context 'positive test' do
       it 'should update the book with valid attributes' do
         book = FactoryGirl.create(:book)
-        put :update ,id: book.id, book: { name: Faker::Name.first_name, author: Faker::Name.first_name, code: 'Dgg566', price: Faker::Number.decimal(5, 2), no_of_copies: Faker::Number.number(3), version: Faker::Number.decimal(2, 3) }
+        put :update, id: book.id, book: { name: Faker::Name.first_name, author: Faker::Name.first_name, code: 'Dgg566', price: Faker::Number.decimal(5, 2), no_of_copies: Faker::Number.number(3), version: Faker::Number.decimal(2, 3) }
         expect(response).to redirect_to book_path(book.id)
       end
     end

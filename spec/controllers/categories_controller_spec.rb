@@ -68,7 +68,7 @@ RSpec.describe CategoriesController, type: :controller do
     context 'positive test' do
       it 'should update the category with valid attributes' do
         category = FactoryGirl.create(:category)
-        put :update ,id: category.id, category: { category_type: 'Educational' }
+        put :update, id: category.id, category: { category_type: 'Educational' }
         expect(response).to redirect_to category_path(category.id)
       end
     end

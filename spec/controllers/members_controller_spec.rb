@@ -77,7 +77,7 @@ RSpec.describe MembersController, type: :controller do
     context 'positive test' do
       it 'should update the member with valid attributes' do
         member = FactoryGirl.create(:member)
-        put :update ,id: member.id, member: { name: Faker::Name.first_name, address: Faker::Address.street_address, phone_no: Faker::Number.number(17), code: 'Dgg566', is_author: false }
+        put :update, id: member.id, member: { name: Faker::Name.first_name, address: Faker::Address.street_address, phone_no: Faker::Number.number(17), code: 'Dgg566', is_author: false }
         expect(response).to redirect_to member_path(member.id)
       end
     end

@@ -3,7 +3,7 @@ class MembersController < ApplicationController
   def index
     @members = Member.all
     respond_to do |format|
-      format.json { render :json => { :members => @members }, status: :ok }
+      format.json { render json: { members: @members }, status: :ok }
       format.html
     end
   end
@@ -12,7 +12,7 @@ class MembersController < ApplicationController
     begin
       @member = Member.find(params[:id])
       respond_to do |format|
-        format.json { render :json => { :member => @member }, status: :ok } 
+        format.json { render json: { member: @member }, status: :ok } 
         format.html
       end
     rescue ActiveRecord::RecordNotFound => e
@@ -24,7 +24,7 @@ class MembersController < ApplicationController
     begin
       @member = Member.find(params[:id])
       respond_to do |format|
-        format.json { render :json => { :member => @member }, status: :ok }
+        format.json { render json: { member: @member }, status: :ok }
         format.html
       end
     rescue ActiveRecord::RecordNotFound => e
@@ -36,12 +36,12 @@ class MembersController < ApplicationController
   	@member = Member.new(member_params)
     if @member.save
       respond_to do |format|
-        format.json { render :json => { :member => @member }, status: :ok }
+        format.json { render json: { member: @member }, status: :ok }
         format.html { redirect_to members_path }
       end
     else
       respond_to do |format|
-        format.json { render :json => { :member => @member.errors }, status: :unprocessable_entity }
+        format.json { render json: { member: @member.errors }, status: :unprocessable_entity }
         format.html { redirect_to new_member_path }
       end
     end
@@ -54,7 +54,7 @@ class MembersController < ApplicationController
         redirect_to @member
       else
         respond_to do |format|
-          format.json { render :json => { :member => @member.errors }, status: :unprocessable_entity }
+          format.json { render json: { member: @member.errors }, status: :unprocessable_entity }
           format.html { redirect_to edit_member_path }
         end
       end
@@ -68,12 +68,12 @@ class MembersController < ApplicationController
       @member = Member.find(params[:id])
       if @member.destroy
         respond_to do |format|
-          format.json { render :json => { :message => 'member was deleted successfully' }, status: :ok }
+          format.json { render json: { :message => 'Member was deleted successfully' }, status: :ok }
           format.html { redirect_to members_path }
         end
       else
         respond_to do |format|
-          format.json { render :json => { :member => @member.errors }, status: :unprocessable_entity }
+          format.json { render json: { member: @member.errors }, status: :unprocessable_entity }
           format.html
         end
       end

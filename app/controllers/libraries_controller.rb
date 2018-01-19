@@ -3,7 +3,7 @@ class LibrariesController < ApplicationController
   def index
     @libraries = Library.all
     respond_to do |format|
-      format.json { render :json => { :libraries => @libraries }, status: :ok }
+      format.json { render json: { libraries: @libraries }, status: :ok }
       format.html
     end
   end
@@ -12,7 +12,7 @@ class LibrariesController < ApplicationController
     begin
       @library = Library.find(params[:id])
       respond_to do |format|
-        format.json { render :json => { :library => @library }, status: :ok } 
+        format.json { render json: { library: @library }, status: :ok } 
         format.html
       end
     rescue ActiveRecord::RecordNotFound => e
@@ -24,7 +24,7 @@ class LibrariesController < ApplicationController
     begin
       @library = Library.find(params[:id])
       respond_to do |format|
-        format.json { render :json => { :library => @library }, status: :ok }
+        format.json { render json: { library: @library }, status: :ok }
         format.html
       end
     rescue ActiveRecord::RecordNotFound => e
@@ -36,12 +36,12 @@ class LibrariesController < ApplicationController
   	@library = Library.new(library_params)
     if @library.save
       respond_to do |format|
-        format.json { render :json => { :library => @library }, status: :ok }
+        format.json { render json: { library: @library }, status: :ok }
         format.html { redirect_to libraries_path }
       end
     else
       respond_to do |format|
-        format.json { render :json => { :library => @library.errors }, status: :unprocessable_entity }
+        format.json { render json: { library: @library.errors }, status: :unprocessable_entity }
         format.html { redirect_to new_library_path }
       end
     end
@@ -54,7 +54,7 @@ class LibrariesController < ApplicationController
         redirect_to @library
       else
         respond_to do |format|
-          format.json { render :json => { :library => @library.errors }, status: :unprocessable_entity }
+          format.json { render json: { library: @library.errors }, status: :unprocessable_entity }
           format.html { redirect_to edit_library_path }
         end
       end
@@ -68,12 +68,12 @@ class LibrariesController < ApplicationController
       @library = Library.find(params[:id])
       if @library.destroy
         respond_to do |format|
-          format.json { render :json => { :message => 'library was deleted successfully' }, status: :ok }
+          format.json { render json: { :message => 'Library was deleted successfully' }, status: :ok }
           format.html { redirect_to libraries_path }
         end
       else
         respond_to do |format|
-          format.json { render :json => { :library => @library.errors }, status: :unprocessable_entity }
+          format.json { render json: { library: @library.errors }, status: :unprocessable_entity }
           format.html
         end
       end
