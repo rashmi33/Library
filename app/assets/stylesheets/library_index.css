@@ -1,0 +1,24 @@
+.container{
+	background-color: lightblue;
+}
+
+.container .header h1 {
+	color: maroon;
+}
+
+.container .container-index h3{
+	color: blue;
+}
+
+.container table{
+	 border: 2px solid green;
+}
+
+.container th{
+	 background-color: navy;
+	 color: pink;
+}
+
+.container tr:hover {
+	background-color: #f2f1f3;
+}
