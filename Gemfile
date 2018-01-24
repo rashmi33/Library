@@ -19,6 +19,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rspec'
 gem 'faker', branch: 'master' , git: 'https://github.com/stympy/faker.git'
+gem 'responders', '~> 2.0'
 
 group :development, :test do
   gem 'byebug'

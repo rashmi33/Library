@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Library</title>
- <script type="javascript" src="app/assets/javascripts/.js"></script>
+ <title>Book</title>
  <link rel="stylesheet" type="text/css" href="library_index.css">
 </head>
 
@@ -13,18 +12,24 @@
         <h1>Library Management System</h1>
       </header>
       <div class="container-index hidden">
-        <h3>Listing Libraries</h3>
-        <table class="library" cellpadding="10">
+        <h3>Listing Books</h3>
+        <table class="book" cellpadding="10">
           <tr>
             <th>Name</th>
-            <th>Address</th>
-            <th>Phone Number</th>
-            <th colspan="3">Links</th>
+            <th>Author</th>
+            <th>Code</th>
+            <th>Price</th>
+            <th>Version</th>
+            <th>No_of_Copies</th>
+            <th colspan="6">Links</th>
           </tr>
           <tr id="template">
             <td id="name"></td>
-            <td id="address"></td>
-            <td id="phone_no"></td>
+            <td id="author"></td>
+            <td id="code"></td>
+            <td id="price"></td>
+            <td id="version"></td>
+            <td id="no_of_copies"></td>
             <td id="links"></td>
           </tr>
         </table>
